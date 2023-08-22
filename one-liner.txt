@@ -1,0 +1,7 @@
+A. In a Linux terminal, reverse-i-search (Ctrl+R) is a feature that allows us to search through the command history by typing keywords.The terminal displays the most recent command that matches the input, which can be then executed or modified.
+
+B. To list hidden directories in a Linux command line, we can use the command ls -a or ls -al. The -a flag displays all files, including hidden ones, while -l provides detailed information about the files and directories. Hidden directories are those that start with a dot (e.g., .hidden_dir).
+
+C. I'm comfortable in using Linux-based OS like Ubuntu, etc. as I have used it for a few times but it is not installed in my windows laptop.
+
+D. No I have never used Servers to host any web applications in the past. Only I have used is Github to host some web applications but I know basics of these servers.
