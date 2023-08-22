@@ -1,16 +1,23 @@
 import re
 
 def is_valid_contact_number(number):
-    # Regular expression pattern for valid contact number
-    pattern = r'^(\+?[0-9]+)?(\d{3}[-.\s]?\d{3}[-.\s]?\d{4})$'
+    patterns = [
+        r'^\d{10}$',                         # 2124567890
+        r'^\d{3}[-.\s]?\d{3}[-.\s]?\d{4}$',  # 212-456-7890, 212.456.7890, 212 456 7890
+        r'^\(\d{3}\)[-.\s]?\d{3}[-.\s]?\d{4}$',  # (212)456-7890, (212)-456-7890
+        r'^\+\d{11}$',                       # +12124567890
+        r'^\+\d{1}\s\d{3}[-.\s]?\d{3}[-.\s]?\d{4}$',  # +1 212.456.7890
+        r'^\+\d{3}[-.\s]?\d{3}[-.\s]?\d{4}$',  # +212-456-7890
+        r'^1-\d{3}-\d{3}-\d{4}$',            # 1-212-456-7890
+    ]
     
-    is_match = re.match(pattern, number)
-    
-    if is_match:
-        return True
-    else:
-        return False
+    # Checking if the number matches any of the patterns
+    for pattern in patterns:
+        if re.match(pattern, number):
+            return True
+    return False
 
+# user input
 contact_number = input("Enter a contact number: ")
 
 if is_valid_contact_number(contact_number):
